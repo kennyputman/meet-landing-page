@@ -18,6 +18,7 @@
 
 body {
   font-family: "Red Hat Display", sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -74,6 +75,9 @@ h2 {
   color: var(--cyan-light);
 }
 
+.txt-violet-light {
+  color: var(--violet-light);
+}
 /* ------------- Components ------------- */
 .timeline {
   width: 100%;
@@ -106,18 +110,22 @@ h2 {
 }
 
 .hero-container {
-  position: relative;
   height: 400px;
 }
 .hero {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  /* Used to get user image to overflow past the page */
-  width: calc(100vw + 80px);
+  justify-content: center;
+  position: relative;
+}
+
+.hero-img-left {
   position: absolute;
   left: -40px;
-  top: 0;
+}
+.hero-img-right {
+  position: absolute;
+  right: -40px;
 }
 
 .hero-content {
@@ -189,10 +197,27 @@ h2 {
 
 .footer {
   position: absolute;
-  bottom: 0;
   width: 100%;
+  bottom: 0;
   height: 308px;
   background: linear-gradient(rgba(77, 150, 168, 0.8), rgba(77, 150, 168, 0.8)),
     url("../assets/desktop/image-footer.jpg") center no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer h3 {
+  color: var(--white);
+  max-width: 350px;
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.footer p {
+  color: var(--white);
+  font-size: 18px;
+  line-height: 26px;
+  max-width: 350px;
 }
