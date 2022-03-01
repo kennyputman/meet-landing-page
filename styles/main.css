@@ -63,13 +63,6 @@ h2 {
 }
 
 /* Color Utilities */
-.bg-cyan-dark {
-  background-color: var(--cyan-dark);
-}
-
-.bg-violet-dark {
-  background-color: var(--violet-dark);
-}
 
 .txt-cyan-light {
   color: var(--cyan-light);
@@ -81,7 +74,6 @@ h2 {
 /* ------------- Components ------------- */
 .timeline {
   width: 100%;
-  margin-bottom: 30px;
 }
 
 .timeline-line {
@@ -102,6 +94,21 @@ h2 {
   height: 56px;
   width: 56px;
   border-radius: 50%;
+}
+
+.btn-cyan-dark {
+  background-color: var(--cyan-dark);
+}
+
+.btn-cyan-dark:hover {
+  background-color: rgb(114, 193, 213);
+}
+
+.btn-violet-dark {
+  background-color: var(--violet-dark);
+}
+.btn-violet-dark:hover {
+  background-color: #b18bdd;
 }
 
 /* -------------  Content -------------  */
@@ -147,6 +154,7 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  margin-top: 64px;
 }
 
 .carousel img {
