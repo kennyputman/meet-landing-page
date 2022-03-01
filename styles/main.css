@@ -147,6 +147,10 @@ h2 {
   margin-bottom: 30px;
 }
 
+.hero-img-tablet {
+  display: none;
+}
+
 /* Carousel */
 .carousel {
   display: flex;
