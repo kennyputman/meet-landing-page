@@ -16,9 +16,14 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Red Hat Display", sans-serif;
-  overflow-x: hidden;
+  position: relative;
 }
 
 h1 {
@@ -159,7 +164,6 @@ h2 {
 
 .hero-img-mobiletab img {
   width: 414px;
-  height: auto;
 }
 
 /* Carousel */
