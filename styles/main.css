@@ -24,8 +24,8 @@ body {
 h1 {
   text-align: center;
   font-weight: 900;
-  font-size: 64px;
-  line-height: 64px;
+  font-size: 40px;
+  line-height: 40px;
 }
 
 h2 {
@@ -45,8 +45,16 @@ h2 {
   align-items: center;
 }
 
+.content-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .text-main {
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
   color: var(--gray);
   text-align: center;
 }
@@ -59,7 +67,7 @@ h2 {
   padding: 15px 25px;
   border-radius: 25px;
   border: none;
-  margin: 10px;
+  margin-bottom: 16px;
 }
 
 /* Color Utilities */
@@ -126,19 +134,15 @@ h2 {
 
 .hero-content {
   max-width: 500px;
+  margin: 24px;
 }
 
 .hero-header {
-  margin: 30px 0;
+  margin: 24px 0;
 }
 
 .hero-description {
-  margin-bottom: 30px;
-}
-
-.hero-img-mobiletab {
-  position: absolute;
-  right: -40px;
+  margin-bottom: 24px;
 }
 
 .hero-img-left {
@@ -152,36 +156,23 @@ h2 {
   right: -40px;
 }
 
-@media screen and (min-width: 768px) {
-  .hero-img-mobiletab {
-    display: none;
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .hero-container {
-    height: 400px;
-  }
-
-  .hero-img-mobiletab {
-    display: none;
-  }
+.hero-img-mobiletab img {
+  width: 414px;
+  height: auto;
 }
 
 /* Carousel */
 .carousel {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 64px;
+  max-width: 327px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+  margin: 64px 24px 0 24px;
 }
 
 .carousel img {
-  width: 255px;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -251,4 +242,53 @@ h2 {
   font-size: 18px;
   line-height: 26px;
   max-width: 350px;
+}
+
+@media (min-width: 768px) {
+  .hero-img-mobiletab img {
+    width: 820px;
+  }
+  h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .carousel {
+    max-width: 100%;
+    margin: 64px 45px 0 45px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-container {
+    height: 400px;
+  }
+
+  .hero-img-mobiletab {
+    display: none;
+  }
+
+  .hero-img-left {
+    display: block;
+    position: absolute;
+    left: -40px;
+  }
+  .hero-img-right {
+    display: block;
+    position: absolute;
+    right: -40px;
+  }
+
+  h1 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  .carousel {
+    max-width: 1110px;
+    grid-gap: 30px;
+    margin: 64px 45px 0 45px;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
