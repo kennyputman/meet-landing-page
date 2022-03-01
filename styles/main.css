@@ -116,23 +116,12 @@ h2 {
   margin: 80px 0;
 }
 
-.hero-container {
-  height: 400px;
-}
 .hero {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: relative;
-}
-
-.hero-img-left {
-  position: absolute;
-  left: -40px;
-}
-.hero-img-right {
-  position: absolute;
-  right: -40px;
 }
 
 .hero-content {
@@ -147,8 +136,38 @@ h2 {
   margin-bottom: 30px;
 }
 
-.hero-img-tablet {
+.hero-img-mobiletab {
+  position: absolute;
+  right: -40px;
+}
+
+.hero-img-left {
   display: none;
+  position: absolute;
+  left: -40px;
+}
+.hero-img-right {
+  display: none;
+  position: absolute;
+  right: -40px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-img-mobiletab {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-container {
+    height: 400px;
+  }
+
+  .hero-img-mobiletab {
+    display: none;
+  }
 }
 
 /* Carousel */
